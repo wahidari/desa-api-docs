@@ -1,0 +1,57 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Berita
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/news</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "data": [
+    {
+      "slug": "quo-rerum-minus-cupiditate-eius",
+      "title": "Ad aut reprehenderit minima praesentium quos illum nihil.",
+      "cover": "http://localhost:8000/media/agenda.png",
+      "description": "Cum omnis neque at rerum nostrum. Et rerum adipisci magnam quibusdam architecto enim. Sint repellat...",
+      "created_at": "04-03-2022",
+      "kategori": [
+        {
+          "id": 2,
+          "kategori": "Kesehatan"
+        },
+        {
+          "id": 5,
+          "kategori": "Agama"
+        }
+      ]
+    }
+  ],
+  "limit": 5,
+  "offset": 0,
+  "pagination": [
+    {
+      "page": 1,
+      "url": "http://127.0.0.1:8000/news?limit=5&offset=0"
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

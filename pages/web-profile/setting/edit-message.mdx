@@ -1,0 +1,50 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Edit Welcome Message
+
+To edit the data in the specified collection with the specified id.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="info">PUT</Badge>
+
+**URL :** <Badge variant="dark">/web/setting/message</Badge>
+
+**Body :** <Badge variant="warning">JSON Data</Badge>
+
+```json
+{
+  "pesan": "Selamat Datang"
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "success update web message",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "pesan": ["Pesan tidak boleh kosong"]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

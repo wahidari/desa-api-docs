@@ -1,0 +1,86 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get Detail Penduduk
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/penduduk/(ID)</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "id": 3,
+  "nama": "Nama B",
+  "foto": "avatar.png",
+  "nik": "123",
+  "no_kk": "123",
+  "hubungan_id": 2,
+  "sex": 1,
+  "tempatlahir": "Malang B",
+  "tanggallahir": "2022-03-01",
+  "agama_id": 1,
+  "pendidikan_terakhir_id": 2,
+  "kawin_id": 2,
+  "kewarganegaraan_id": 1,
+  "dusun_id": 2,
+  "rw_id": 2,
+  "rt_id": 2,
+  "alamat": "Alamat B",
+  "nama_ayah": "Ayah B",
+  "nama_ibu": "Ibu B",
+  "status": 1,
+  "created_at": "2022-02-28T14:54:16.000000Z",
+  "updated_at": "2022-02-28T17:51:34.000000Z",
+  "deleted_at": null,
+  "hubungan": {
+    "id": 2,
+    "nama": "SUAMI",
+    "created_at": null,
+    "updated_at": null
+  },
+  "agama": {
+    "id": 1,
+    "nama": "ISLAM",
+    "created_at": null,
+    "updated_at": null
+  },
+  "pendidikan": {
+    "id": 2,
+    "nama": "BELUM TAMAT SD/SEDERAJAT",
+    "created_at": null,
+    "updated_at": null
+  },
+  "kawin": {
+    "id": 2,
+    "nama": "KAWIN",
+    "created_at": null,
+    "updated_at": null
+  },
+  "kewarganegaraan": {
+    "id": 1,
+    "nama": "WNI",
+    "created_at": null,
+    "updated_at": null
+  },
+  "dusun": null,
+  "rw": null,
+  "rt": null
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

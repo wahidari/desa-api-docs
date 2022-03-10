@@ -1,0 +1,52 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get Detail RW
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/wiladm/dusun/(ID)/rw/(ID)</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "id": 1,
+  "dusun_id": 1,
+  "rw_nama": "001",
+  "rw_ketua": "Sugino1",
+  "rt_nama": null,
+  "rt_ketua": null,
+  "dusun": {
+    "id": 1,
+    "nama_dusun": "Sugih Waras",
+    "kepala_dusun": "Sugino",
+    "nik": "111111111"
+  },
+  "r_t": [
+    {
+      "id": 2,
+      "rw_nama": "001",
+      "rt_nama": "001",
+      "rt_ketua": "budi",
+      "l_count": 2,
+      "p_count": 2
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

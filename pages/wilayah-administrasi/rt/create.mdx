@@ -1,0 +1,46 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Create RT
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/wiladm/dusun/(ID)/rw/(ID)/rt</Badge>
+
+**Body :** <Badge variant="warning">JSON Data</Badge>
+
+```json
+{
+  "rt_nama": "001",
+  "rt_ketua": "budi"
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success create RT",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "rt_nama": ["Nama RT Tidak boleh kosong"],
+    "rt_ketua": ["Nama Ketua RT Tidak boleh kosong"]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

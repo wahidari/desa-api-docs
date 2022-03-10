@@ -1,0 +1,54 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Edit Dana Desa
+
+To edit the data in the specified collection with the specified id.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="info">PUT</Badge>
+
+**URL :** <Badge variant="dark">/jabatan/(ID)</Badge>
+
+**Body :** <Badge variant="warning">JSON Data</Badge>
+
+```json
+{
+  "nama_dusun": "Sugih Waras",
+  "kepala_dusun": "Sugino",
+  "nik": "111111111"
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success edit jabatan",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "nama_dusun": ["Nama Dusun tidak boleh kosong"],
+    "kepala_dusun": ["Kepala Dusun tidak boleh kosong"],
+    "nik": ["NIK Kepala Dusun tidak boleh kosong"]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

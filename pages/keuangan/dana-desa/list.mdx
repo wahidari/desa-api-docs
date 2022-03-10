@@ -1,0 +1,39 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Dana Desa
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/dana-desa</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+[
+  {
+    "id": 1,
+    "jenis": 1,
+    "uraian": "Pendapatan",
+    "tahun": "2022",
+    "anggaran": "20000",
+    "realisasi": "10000",
+    "created_at": "2022-03-09T12:14:02.000000Z"
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

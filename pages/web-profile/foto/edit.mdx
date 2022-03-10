@@ -1,0 +1,51 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Edit Produk Hukum
+
+To edit the data in the specified collection with the specified id.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/gallery/photo/(ID)</Badge>
+
+**Body :** <Badge variant="warning">Form Data</Badge>
+
+| Field       | Type     | Required |
+| :---------  | :------- | :------: |
+| title       | String   |    ✔️    |
+| description | String   |          |
+| photo       | JPG/PNG  |    ✔️    |
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success edit photo",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "title": ["Judul Photo tidak boleh kosong"],
+    "photo": ["Photo tidak boleh kosong"]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

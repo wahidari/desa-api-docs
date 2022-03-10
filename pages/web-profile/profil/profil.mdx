@@ -1,0 +1,50 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Profile
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/profil</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "nama_desa": "NAMA_DESA",
+  "kode_desa": "000000",
+  "kode_pos": "000000",
+  "nama_kecamatan": "NAMA_KECAMATAN",
+  "kode_kecamatan": "000000",
+  "nama_kepala_camat": "NAMA_KEPALA_CAMAT",
+  "nip_kepala_camat": "NIP_KEPALA_CAMAT",
+  "nama_kabupaten": "NAMA_KABUPATEN",
+  "kode_kabupaten": "000000",
+  "nama_provinsi": "NAMA_PROVINSI",
+  "kode_provinsi": "000000",
+  "logo": "http://localhost:8000/media/logo-kLVMz5Q.jpeg",
+  "alamat": null,
+  "email_desa": null,
+  "phone_kantor": "000000",
+  "phone_polisi": "000000",
+  "phone_pemadam": "000000",
+  "phone_rs": "000000",
+  "phone_pln": "000000",
+  "website": null
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

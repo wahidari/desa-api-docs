@@ -1,0 +1,62 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Edit Struktur
+
+To edit the data in the specified collection with the specified id.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="info">PUT</Badge>
+
+**URL :** <Badge variant="dark">/struktur/(ID)</Badge>
+
+**Body :** <Badge variant="warning">Form Data</Badge>
+
+| Field      | Type     | Required |
+| :--------- | :------- | :------: |
+| nik        | String   |    ✔️    |
+| nip        | String   |    ✔️    |
+| name       | String   |    ✔️    |
+| photo      | JPG/PNG  |    ✔️    |
+| alamat     | String   |    ✔️    |
+| phone      | String   |    ✔️    |
+| status     | String   |    ✔️    |
+| jabatan_id | String   |    ✔️    |
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success edit struktur",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "nik": ["NIK tidak boleh kosong"],
+    "nip": ["NIP tidak boleh kosong"],
+    "name": ["Nama tidak boleh kosong"],
+    "photo": ["Photo tidak boleh kosong"],
+    "alamat": ["Alamat tidak boleh kosong"],
+    "phone": ["Photo harus berupa foto"],
+    "status": ["Status tidak boleh kosong"],
+    "jabatan_id": ["ID Jabatan tidak boleh kosong"]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

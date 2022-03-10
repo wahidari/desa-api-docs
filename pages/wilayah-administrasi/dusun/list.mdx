@@ -1,0 +1,40 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Dusun
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/wiladm/dusun</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+[
+  {
+    "id": 1,
+    "nama_dusun": "Sugih Waras",
+    "kepala_dusun": "Sugino",
+    "nik": "111111111",
+    "r_t_count": 1,
+    "r_w_count": 1,
+    "l_count": 94,
+    "p_count": 94
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

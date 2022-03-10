@@ -1,0 +1,42 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Foto
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/gallery/photo</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+[
+  {
+    "slug": "A-xvjMrMl",
+    "title": "A",
+    "description": null,
+    "photo": "http://localhost:8000/media/photo-xvjMrMl.jpeg"
+  },
+  {
+    "slug": "Title-WAvw6eY",
+    "title": "Title",
+    "description": "Description",
+    "photo": "http://localhost:8000/media/photo-Emzjr4y.jpeg"
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

@@ -1,0 +1,73 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Edit Penduduk
+
+To edit the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/penduduk/(ID)?_method=PUT</Badge>
+
+**Body :** <Badge variant="warning">Form Data</Badge>
+
+| Field               | Type    | Required |
+| :----------         | :------ | :------: |
+| nama                | String  |    ✔️    |
+| nik                 | String  |    ✔️    |
+| no_kk               | string  |    ✔️    |
+| sex                 | string  |    ✔️    |
+| tempatlahir         | string  |    ✔️    |
+| tanggallahir        | string  |    ✔️    |
+| alamat              | string  |           |
+| nama_ayah           | string  |           |
+| nama_ibu            | string  |           |
+| hubungan            | string  |    ✔️    |
+| agama               | string  |    ✔️    |
+| pendidikan_terakhir | string  |    ✔️    |
+| kawin               | string  |    ✔️    |
+| kewarganegaraan     | string  |    ✔️    |
+| pekerjaan           | string  |    ✔️    |
+| dusun               | string  |    ✔️    |
+| rw                  | string  |    ✔️    |
+| rt                  | string  |    ✔️    |
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success add penduduk",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "nama": ["The nama field is required."],
+    "nik": ["The nik field is required."],
+    "no_kk": ["The no kk field is required."],
+    "hubungan": ["The hubungan field is required."],
+    "sex": ["The sex field is required."],
+    "tempatlahir": ["The tempatlahir field is required."],
+    "tanggallahir": ["The tanggallahir field is required."],
+    "agama": ["The agama field is required."],
+    "pendidikan_terakhir": ["The pendidikan terakhir field is required."],
+    "kawin": ["The kawin field is required."],
+    "pekerjaan": ["The pekerjaan field is required."],
+    "kewarganegaraan": ["The kewarganegaraan field is required."],
+    "dusun": ["The dusun field is required."],
+    "rw": ["The rw field is required."],
+    "rt": ["The rt field is required."]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

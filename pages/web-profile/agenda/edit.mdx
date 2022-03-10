@@ -1,0 +1,48 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Edit Agenda
+
+To edit the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/agenda/(SLUG)?_method=PUT</Badge>
+
+**Body :** <Badge variant="warning">Form Data</Badge>
+
+| Field       | Type     | Required |
+| :---------- | :------- | :------: |
+| title       | String   |    ✔️    |
+| cover       | JPG/PNG  |          |
+| description | string   |    ✔️    |
+| kategori[]  | string   |    ✔️    |
+| kategori[]  | string   |    ✔️    |
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success add agenda",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "title": ["Judul tidak boleh kosong"],
+    "description": ["Deskripsi tidak boleh kosong"],
+    "kategori": ["Kategori tidak boleh kosong"]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

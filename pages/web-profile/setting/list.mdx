@@ -1,0 +1,57 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Setting Web Profile
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/web/setting</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "setting": {
+    "pesan_selamat_datang": "Selamat Datang Di Aplikasi Desa Digital",
+    "link_ecommerce": "https://www.google.co.id/",
+    "link_ereport": "https://www.google.co.id/",
+    "link_eletter": "https://www.google.co.id/",
+    "link_ehealth": "https://www.google.co.id/"
+  },
+  "hero": [
+    {
+      "id": 1,
+      "title": "Judul 1",
+      "subtitle": "Sub Judul 1",
+      "image": "http://localhost:8000/media/hero.png"
+    },
+    {
+      "id": 2,
+      "title": "Judul 2",
+      "subtitle": "Sub Judul 2",
+      "image": "http://localhost:8000/media/hero.png"
+    },
+    {
+      "id": 3,
+      "title": "Judul 3",
+      "subtitle": "Sub Judul 3",
+      "image": "http://localhost:8000/media/hero.png"
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

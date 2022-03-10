@@ -1,0 +1,84 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Edit Profil
+
+To edit the data in the specified collection with the specified id.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="info">PUT</Badge>
+
+**URL :** <Badge variant="dark">/profil</Badge>
+
+**Body :** <Badge variant="warning">JSON Data</Badge>
+
+```json
+{
+  "nama_desa": "Nama Desa",
+  "kode_desa": "Kode Desa",
+  "kode_pos": "Kode Pos",
+  "alamat": "Alamat Kantor",
+  "email_desa": "Email",
+  "phone_kantor": "Telepon Kantor",
+  "website": "Website",
+  "phone_polisi": "Telepon Polisi",
+  "phone_pemadam": "Telepon Pemadam",
+  "phone_pln": "Telepon PLN",
+  "nama_kecamatan": "Nama Kecamatan",
+  "kode_kecamatan": "Kode Kecamatan",
+  "nama_kepala_camat": "Nama Camat",
+  "nip_kepala_camat": "NIP Camat",
+  "nama_kabupaten": "Nama Kabupaten",
+  "kode_kabupaten": "Kode Kabupaten",
+  "nama_provinsi": "Nama Provinsi",
+  "kode_provinsi": "Kode Provinsi"
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success edit profil",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "nama_desa": ["Nama Desa tidak boleh kosong"],
+    "kode_desa": ["Kode Desa tidak boleh kosong"],
+    "kode_pos": ["Kode Pos tidak boleh kosong"],
+    "alamat": ["Alamat Kantor tidak boleh kosong"],
+    "email_desa": ["Email tidak boleh kosong"],
+    "phone_kantor": ["Telepon Kantor tidak boleh kosong"],
+    "website": ["Website tidak boleh kosong"],
+    "phone_polisi": ["Telepon Polisi tidak boleh kosong"],
+    "phone_pemadam": ["Telepon Pemadam tidak boleh kosong"],
+    "phone_pln": ["Telepon PLN tidak boleh kosong"],
+    "nama_kecamatan": ["Nama Kecamatan tidak boleh kosong"],
+    "kode_kecamatan": ["Kode Kecamatan tidak boleh kosong"],
+    "nama_kepala_camat": ["Nama Camat tidak boleh kosong"],
+    "nip_kepala_camat": ["NIP Camat tidak boleh kosong"],
+    "nama_kabupaten": ["Nama Kabupaten tidak boleh kosong"],
+    "kode_kabupaten": ["Kode Kabupaten tidak boleh kosong"],
+    "nama_provinsi": ["Nama Provinsi tidak boleh kosong"],
+    "kode_provinsi": ["Kode Provinsi tidak boleh kosong"]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
