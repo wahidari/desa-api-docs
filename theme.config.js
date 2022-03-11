@@ -5,6 +5,7 @@ export default {
   search: true,
   prevLinks: true,
   nextLinks: true,
+  floatTOC: true,
   footer: true,
   footerEditLink: 'Edit this page on GitHub',
   footerText: <>MIT {new Date().getFullYear()} © API Docs.</>,

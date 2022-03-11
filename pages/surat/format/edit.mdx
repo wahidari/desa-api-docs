@@ -1,0 +1,62 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Edit Format Surat
+
+To edit the data in the specified collection with the specified id.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/surat/format/(ID)?_method=PUT</Badge>
+
+**Body :** <Badge variant="warning">Form Data</Badge>
+
+| Field          | Type     | Required |
+| :---------     | :------- | :------: |
+| kode           | String   |    ✔️    |
+| nama_surat     | String   |    ✔️    |
+| pemohon        | String   |    ✔️    |
+| format_file    | File/RTF |    ✔️    |
+| format_field[] | String   |    ✔️    |
+| format_field[] | String   |    ✔️    |
+| requirement[]  | String   |    ✔️    |
+| requirement[]  | String   |    ✔️    |
+| perangkat_id   | String   |    ✔️    |
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success Update Format",
+  "status": 201
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "kode": ["The kode field is required."],
+    "nama_surat": ["The nama surat field is required."],
+    "pemohon": ["The pemohon field is required."],
+    "format_file": ["The format file field is required."],
+    "format_field": ["The format field field is required."],
+    "requirement": ["The requirement field is required."],
+    "perangkat_id": ["The perangkat id field is required."]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

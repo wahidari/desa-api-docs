@@ -1,0 +1,46 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Format Surat
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/surat/format</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "kode": "S-1",
+      "nama_surat": "Surat Keterangan",
+      "pemohon": 1
+    }
+  ],
+  "limit": 5,
+  "offset": 0,
+  "pagination": [
+    {
+      "page": 1,
+      "url": "http://127.0.0.1:8000/surat/format?limit=5&offset=0"
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
