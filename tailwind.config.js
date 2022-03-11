@@ -5,5 +5,5 @@ module.exports = {
         "./pages/**/*.mdx",
         "./theme.config.js",
         "./styles.css",
-    ],
+    ]
 };
