@@ -18,7 +18,7 @@ export default function AlertOutline({ variant, children }) {
         {children}
       </div>
     : variant == "dark" ?
-      <div className="p-3 font-normal mb-4 text-sm rounded-lg text-gray-700 dark:text-gray-800 border border-gray-700 dark:border-gray-500" role="alert">
+      <div className="p-3 font-normal mb-4 text-sm rounded-lg text-gray-700 dark:text-gray-100 border border-gray-500 dark:border-gray-500" role="alert">
         {children}
       </div>
     : 
