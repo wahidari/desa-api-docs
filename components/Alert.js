@@ -17,6 +17,10 @@ export default function Alert({ variant, children }) {
       <div className="p-3 font-normal mb-4 text-sm rounded-lg text-orange-600 bg-orange-200" role="alert">
         {children}
       </div>
+    : variant == "purple" ?
+      <div className="p-3 font-normal mb-4 text-sm rounded-lg text-violet-700 bg-violet-200" role="alert">
+        {children}
+      </div>
     : variant == "dark" ?
       <div className="p-3 font-normal mb-4 text-sm rounded-lg text-gray-700 bg-gray-200" role="alert">
         {children}

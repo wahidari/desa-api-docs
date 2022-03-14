@@ -17,6 +17,10 @@ export default function Badge({ variant, children }) {
       <span className="text-sm font-semibold mr-2 px-2 py-1 rounded bg-orange-200 text-orange-600">
         {children}
       </span>
+    : variant == "purple" ?
+      <span className="text-sm font-semibold mr-2 px-2 py-1 rounded bg-violet-200 text-violet-700">
+        {children}
+      </span>
     : variant == "dark" ?
       <span className="text-sm font-semibold mr-2 px-2 py-1 rounded bg-gray-200 text-gray-700">
         {children}

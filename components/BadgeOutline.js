@@ -17,6 +17,10 @@ export default function BadgeOutline({ variant, children }) {
       <span className="text-sm font-semibold mr-2 px-2 py-1 rounded text-orange-500 border border-orange-500">
         {children}
       </span>
+    : variant == "purple" ?
+      <span className="text-sm font-semibold mr-2 px-2 py-1 rounded text-violet-500 border border-violet-500">
+        {children}
+      </span>
     : variant == "dark" ?
       <span className="text-sm font-semibold mr-2 px-2 py-1 rounded text-gray-700 dark:text-gray-300 border border-gray-500">
         {children}
