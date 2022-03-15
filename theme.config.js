@@ -1,6 +1,6 @@
 export default {
-  github: 'https://github.com/wahidari/api-docs',
-  docsRepositoryBase: 'https://github.com/wahidari/api-docs/blob/main',
+  github: 'https://github.com/wahidari/desa-api-docs',
+  docsRepositoryBase: 'https://github.com/wahidari/desa-api-docs/blob/main',
   titleSuffix: ' – Desa Digital API Docs',
   search: true,
   prevLinks: true,
