@@ -1,0 +1,54 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Create Pembangunan
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/pembangunan</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+  "nama_pembangunan": "Irigasi 3",
+  "sumber_dana": "Dana Desa",
+  "tahun": "2022",
+  "dusun_id": 1,
+  "rw_id": 1,
+  "rt_id": 1
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success create pembangunan",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "nama_pembangunan": ["The nama pembangunan field is required."],
+    "sumber_dana": ["The sumber dana field is required."],
+    "tahun": ["The tahun field is required."],
+    "dusun_id": ["The dusun id field is required."],
+    "rw_id": ["The rw id field is required."],
+    "rt_id": ["The rt id field is required."]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
