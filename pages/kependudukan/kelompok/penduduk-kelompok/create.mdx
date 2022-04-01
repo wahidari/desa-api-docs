@@ -1,0 +1,46 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Create Penduduk Kelompok
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/kelompok/(ID)/penduduk</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+  "kelompok_id": "8",
+  "penduduk_id": "3"
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success create kelompok penduduk",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "kelompok_id": ["Kelompok ID Tidak boleh kosong"],
+    "penduduk_id": ["Penduduk ID Tidak boleh kosong"]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
