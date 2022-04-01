@@ -1,0 +1,54 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Create Kelompok
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/kelompok</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+  "nama_kelompok": "Kelompok D",
+  "mr_kelompok_id": "27",
+  "ketua_id": "1",
+  "dusun_id": "1",
+  "rw_id": "1",
+  "rt_id": "1"
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success create kelompok",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "nama_kelompok": ["Nama Kelompok Tidak boleh kosong"],
+    "mr_kelompok_id": ["MR Kelompok ID Tidak boleh kosong"],
+    "ketua_id": ["Ketua ID Tidak boleh kosong"],
+    "dusun_id": ["Dusun ID Tidak boleh kosong"],
+    "rw_id": ["RW ID Tidak boleh kosong"],
+    "rt_id": ["RT ID Tidak boleh kosong"]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

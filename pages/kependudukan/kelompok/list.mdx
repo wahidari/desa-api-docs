@@ -1,0 +1,90 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Kelompok
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/kelompok</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+[
+  {
+    "id": 11,
+    "nama_kelompok": "Kelompok A",
+    "mr_kelompok_id": 28,
+    "ketua_id": 1,
+    "dusun_id": 1,
+    "rw_id": 1,
+    "rt_id": 2,
+    "kategori": {
+      "id": 28,
+      "nama_kelompok": "Kategori A"
+    },
+    "ketua": {
+      "id": 1,
+      "nama": "budiman",
+      "foto": "avatar.png",
+      "nik": "1234567890",
+      "no_kk": "1234567890",
+      "hubungan_id": 1,
+      "sex": 1,
+      "tempatlahir": "kamal",
+      "tanggallahir": "2021-08-09",
+      "agama_id": 1,
+      "pendidikan_terakhir_id": 1,
+      "kawin_id": 1,
+      "kewarganegaraan_id": 1,
+      "dusun_id": 1,
+      "rw_id": 1,
+      "rt_id": 1,
+      "alamat": "kamal",
+      "nama_ayah": "tes",
+      "nama_ibu": "tes2",
+      "status": 1,
+      "created_at": "2022-03-31T06:32:28.000000Z",
+      "updated_at": "2022-03-31T06:32:28.000000Z",
+      "deleted_at": null
+    },
+    "dusun": {
+      "id": 1,
+      "nama_dusun": "Dusun A",
+      "kepala_dusun": "Kepala Dusun A",
+      "nik": "123"
+    },
+    "rt": {
+      "id": 2,
+      "dusun_id": 1,
+      "rw_nama": "001",
+      "rw_ketua": "Dusun A RW Satu",
+      "rt_nama": "001",
+      "rt_ketua": "Dusun A RW Satu RT Satu"
+    },
+    "rw": {
+      "id": 1,
+      "dusun_id": 1,
+      "rw_nama": "001",
+      "rw_ketua": "Dusun A RW Satu",
+      "rt_nama": null,
+      "rt_ketua": null
+    }
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

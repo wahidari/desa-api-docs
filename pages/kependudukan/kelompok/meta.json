@@ -4,5 +4,6 @@
   "create": "Create Kelompok",
   "edit": "Update Kelompok",
   "delete": "Delete Kelompok",
-  "kategori-kelompok": "Kategori Kelompok"
+  "kategori-kelompok": "Kategori Kelompok",
+  "penduduk-kelompok": "Penduduk Kelompok"
 }
