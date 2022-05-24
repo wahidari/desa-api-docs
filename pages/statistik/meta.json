@@ -1,3 +1,7 @@
 {
-  "kelamin": "Jenis Kelamin"
+  "kelamin": "Statistik Jenis Kelamin",
+  "agama": "Statistik Agama",
+  "pekerjaan": "Statistik Pekerjaan",
+  "status": "Statistik Status",
+  "umur": "Statistik Umur"
 }
