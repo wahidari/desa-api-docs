@@ -1,0 +1,386 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get Statistik Pekerjaan
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/statistik/pekerjaan</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+[
+  {
+    "nama": "BELUM/TIDAK BEKERJA",
+    "jumlah": 3
+  },
+  {
+    "nama": "MENGURUS RUMAH TANGGA",
+    "jumlah": 2
+  },
+  {
+    "nama": "PELAJAR/MAHASISWA",
+    "jumlah": 3
+  },
+  {
+    "nama": "PENSIUNAN",
+    "jumlah": 0
+  },
+  {
+    "nama": "PEGAWAI NEGERI SIPIL (PNS)",
+    "jumlah": 1
+  },
+  {
+    "nama": "TENTARA NASIONAL INDONESIA (TNI)",
+    "jumlah": 0
+  },
+  {
+    "nama": "KEPOLISIAN RI (POLRI)",
+    "jumlah": 0
+  },
+  {
+    "nama": "PERDAGANGAN",
+    "jumlah": 0
+  },
+  {
+    "nama": "PETANI/PEKEBUN",
+    "jumlah": 1
+  },
+  {
+    "nama": "PETERNAK",
+    "jumlah": 2
+  },
+  {
+    "nama": "NELAYAN/PERIKANAN",
+    "jumlah": 0
+  },
+  {
+    "nama": "INDUSTRI",
+    "jumlah": 0
+  },
+  {
+    "nama": "KONSTRUKSI",
+    "jumlah": 2
+  },
+  {
+    "nama": "TRANSPORTASI",
+    "jumlah": 1
+  },
+  {
+    "nama": "KARYAWAN SWASTA",
+    "jumlah": 0
+  },
+  {
+    "nama": "KARYAWAN BUMN",
+    "jumlah": 2
+  },
+  {
+    "nama": "KARYAWAN BUMD",
+    "jumlah": 2
+  },
+  {
+    "nama": "KARYAWAN HONORER",
+    "jumlah": 2
+  },
+  {
+    "nama": "BURUH HARIAN LEPAS",
+    "jumlah": 1
+  },
+  {
+    "nama": "BURUH TANI/PERKEBUNAN",
+    "jumlah": 3
+  },
+  {
+    "nama": "BURUH NELAYAN/PERIKANAN",
+    "jumlah": 0
+  },
+  {
+    "nama": "BURUH PETERNAKAN",
+    "jumlah": 0
+  },
+  {
+    "nama": "PEMBANTU RUMAH TANGGA",
+    "jumlah": 2
+  },
+  {
+    "nama": "TUKANG CUKUR",
+    "jumlah": 0
+  },
+  {
+    "nama": "TUKANG LISTRIK",
+    "jumlah": 1
+  },
+  {
+    "nama": "TUKANG BATU",
+    "jumlah": 2
+  },
+  {
+    "nama": "TUKANG KAYU",
+    "jumlah": 2
+  },
+  {
+    "nama": "TUKANG SOL SEPATU",
+    "jumlah": 3
+  },
+  {
+    "nama": "TUKANG LAS/PANDAI BESI",
+    "jumlah": 2
+  },
+  {
+    "nama": "TUKANG JAHIT",
+    "jumlah": 4
+  },
+  {
+    "nama": "TUKANG GIGI",
+    "jumlah": 1
+  },
+  {
+    "nama": "PENATA RIAS",
+    "jumlah": 2
+  },
+  {
+    "nama": "PENATA BUSANA",
+    "jumlah": 2
+  },
+  {
+    "nama": "PENATA RAMBUT",
+    "jumlah": 2
+  },
+  {
+    "nama": "MEKANIK",
+    "jumlah": 1
+  },
+  {
+    "nama": "SENIMAN",
+    "jumlah": 1
+  },
+  {
+    "nama": "TABIB",
+    "jumlah": 0
+  },
+  {
+    "nama": "PARAJI",
+    "jumlah": 0
+  },
+  {
+    "nama": "PERANCANG BUSANA",
+    "jumlah": 0
+  },
+  {
+    "nama": "PENTERJEMAH",
+    "jumlah": 1
+  },
+  {
+    "nama": "IMAM MASJID",
+    "jumlah": 3
+  },
+  {
+    "nama": "PENDETA",
+    "jumlah": 2
+  },
+  {
+    "nama": "PASTOR",
+    "jumlah": 9
+  },
+  {
+    "nama": "WARTAWAN",
+    "jumlah": 5
+  },
+  {
+    "nama": "USTADZ/MUBALIGH",
+    "jumlah": 0
+  },
+  {
+    "nama": "JURU MASAK",
+    "jumlah": 2
+  },
+  {
+    "nama": "PROMOTOR ACARA",
+    "jumlah": 2
+  },
+  {
+    "nama": "ANGGOTA DPR-RI",
+    "jumlah": 2
+  },
+  {
+    "nama": "ANGGOTA DPD",
+    "jumlah": 4
+  },
+  {
+    "nama": "ANGGOTA BPK",
+    "jumlah": 2
+  },
+  {
+    "nama": "PRESIDEN",
+    "jumlah": 1
+  },
+  {
+    "nama": "WAKIL PRESIDEN",
+    "jumlah": 2
+  },
+  {
+    "nama": "ANGGOTA MAHKAMAH KONSTITUSI",
+    "jumlah": 2
+  },
+  {
+    "nama": "ANGGOTA KABINET KEMENTERIAN",
+    "jumlah": 3
+  },
+  {
+    "nama": "DUTA BESAR",
+    "jumlah": 2
+  },
+  {
+    "nama": "GUBERNUR",
+    "jumlah": 4
+  },
+  {
+    "nama": "WAKIL GUBERNUR",
+    "jumlah": 1
+  },
+  {
+    "nama": "BUPATI",
+    "jumlah": 2
+  },
+  {
+    "nama": "WAKIL BUPATI",
+    "jumlah": 1
+  },
+  {
+    "nama": "WALIKOTA",
+    "jumlah": 0
+  },
+  {
+    "nama": "WAKIL WALIKOTA",
+    "jumlah": 0
+  },
+  {
+    "nama": "ANGGOTA DPRD PROVINSI",
+    "jumlah": 0
+  },
+  {
+    "nama": "ANGGOTA DPRD KABUPATEN/KOTA",
+    "jumlah": 0
+  },
+  {
+    "nama": "DOSEN",
+    "jumlah": 0
+  },
+  {
+    "nama": "GURU",
+    "jumlah": 0
+  },
+  {
+    "nama": "PILOT",
+    "jumlah": 0
+  },
+  {
+    "nama": "PENGACARA",
+    "jumlah": 0
+  },
+  {
+    "nama": "NOTARIS",
+    "jumlah": 0
+  },
+  {
+    "nama": "ARSITEK",
+    "jumlah": 0
+  },
+  {
+    "nama": "AKUNTAN",
+    "jumlah": 0
+  },
+  {
+    "nama": "KONSULTAN",
+    "jumlah": 0
+  },
+  {
+    "nama": "DOKTER",
+    "jumlah": 0
+  },
+  {
+    "nama": "BIDAN",
+    "jumlah": 0
+  },
+  {
+    "nama": "PERAWAT",
+    "jumlah": 0
+  },
+  {
+    "nama": "APOTEKER",
+    "jumlah": 0
+  },
+  {
+    "nama": "PSIKIATER/PSIKOLOG",
+    "jumlah": 0
+  },
+  {
+    "nama": "PENYIAR TELEVISI",
+    "jumlah": 0
+  },
+  {
+    "nama": "PENYIAR RADIO",
+    "jumlah": 0
+  },
+  {
+    "nama": "PELAUT",
+    "jumlah": 0
+  },
+  {
+    "nama": "PENELITI",
+    "jumlah": 0
+  },
+  {
+    "nama": "SOPIR",
+    "jumlah": 0
+  },
+  {
+    "nama": "PIALANG",
+    "jumlah": 0
+  },
+  {
+    "nama": "PARANORMAL",
+    "jumlah": 0
+  },
+  {
+    "nama": "PEDAGANG",
+    "jumlah": 0
+  },
+  {
+    "nama": "PERANGKAT DESA",
+    "jumlah": 0
+  },
+  {
+    "nama": "KEPALA DESA",
+    "jumlah": 0
+  },
+  {
+    "nama": "BIARAWATI",
+    "jumlah": 0
+  },
+  {
+    "nama": "WIRASWASTA",
+    "jumlah": 0
+  },
+  {
+    "nama": "LAINNYA",
+    "jumlah": 0
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

@@ -1,0 +1,58 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get Statistik Agama
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/statistik/agama</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+[
+  {
+    "nama": "ISLAM",
+    "jumlah": 7
+  },
+  {
+    "nama": "KRISTEN",
+    "jumlah": 12
+  },
+  {
+    "nama": "KATHOLIK",
+    "jumlah": 21
+  },
+  {
+    "nama": "HINDU",
+    "jumlah": 15
+  },
+  {
+    "nama": "BUDHA",
+    "jumlah": 14
+  },
+  {
+    "nama": "KHONGHUCU",
+    "jumlah": 10
+  },
+  {
+    "nama": "Kepercayaan Terhadap Tuhan YME / Lainnya",
+    "jumlah": 21
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```

@@ -1,0 +1,82 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get Statistik Umur
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/statistik/umur</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+[
+  {
+    "umur": "0-4",
+    "jumlah": 9
+  },
+  {
+    "umur": "5-9",
+    "jumlah": 8
+  },
+  {
+    "umur": "10-14",
+    "jumlah": 12
+  },
+  {
+    "umur": "15-19",
+    "jumlah": 7
+  },
+  {
+    "umur": "20-24",
+    "jumlah": 9
+  },
+  {
+    "umur": "25-29",
+    "jumlah": 8
+  },
+  {
+    "umur": "30-34",
+    "jumlah": 11
+  },
+  {
+    "umur": "35-39",
+    "jumlah": 12
+  },
+  {
+    "umur": "40-44",
+    "jumlah": 8
+  },
+  {
+    "umur": "45-49",
+    "jumlah": 9
+  },
+  {
+    "umur": "50-59",
+    "jumlah": 7
+  },
+  {
+    "umur": "60-69",
+    "jumlah": 0
+  },
+  {
+    "umur": "Diatas 70",
+    "jumlah": 0
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
