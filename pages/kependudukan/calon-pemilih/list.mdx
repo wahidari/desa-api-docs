@@ -1,0 +1,444 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Calon Pemilih
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/penduduk/pemilih?tanggal=2022-5-30</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "nama": "Dimas Hutapea",
+      "foto": "avatar.png",
+      "nik": "3323795501134167",
+      "no_kk": "3520331807992381",
+      "hubungan_id": 10,
+      "sex": 2,
+      "tempatlahir": "Bangkalan",
+      "tanggallahir": "1991-12-04",
+      "agama_id": 6,
+      "pendidikan_terakhir_id": 2,
+      "kawin_id": 4,
+      "kewarganegaraan_id": 1,
+      "pekerjaan_id": 25,
+      "dusun_id": 1,
+      "rw_id": 1,
+      "rt_id": 51,
+      "alamat": "Jr. Dewi Sartika No. 662, Blitar 20278, Jatim",
+      "nama_ayah": "Kamaria Nasyidah",
+      "nama_ibu": "Cakrawangsa Wawan Hutasoit",
+      "status": 1,
+      "created_at": "2022-05-29T12:52:55.000000Z",
+      "updated_at": "2022-05-29T12:52:55.000000Z",
+      "deleted_at": null,
+      "hubungan": {
+        "id": 10,
+        "nama": "PEMBANTU"
+      },
+      "agama": {
+        "id": 6,
+        "nama": "KHONGHUCU"
+      },
+      "pendidikan": {
+        "id": 2,
+        "nama": "BELUM TAMAT SD/SEDERAJAT"
+      },
+      "kawin": {
+        "id": 4,
+        "nama": "CERAI MATI"
+      },
+      "kewarganegaraan": {
+        "id": 1,
+        "nama": "WNI"
+      },
+      "pekerjaan": {
+        "id": 25,
+        "nama": "TUKANG LISTRIK"
+      },
+      "dusun": {
+        "id": 1,
+        "nama_dusun": "Dusun_1",
+        "kepala_dusun": "Mr. Kaden Marks",
+        "nik": "11111111111"
+      },
+      "rt": {
+        "id": 51,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": "Dusun_1_rw_1_rt_1",
+        "rt_ketua": "Rodger Murray PhD"
+      },
+      "rw": {
+        "id": 1,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": null,
+        "rt_ketua": null
+      }
+    },
+    {
+      "id": 2,
+      "nama": "Warji Prasetya",
+      "foto": "avatar.png",
+      "nik": "3209650401150788",
+      "no_kk": "9202824311131969",
+      "hubungan_id": 5,
+      "sex": 1,
+      "tempatlahir": "Bangkalan",
+      "tanggallahir": "1984-10-05",
+      "agama_id": 5,
+      "pendidikan_terakhir_id": 4,
+      "kawin_id": 1,
+      "kewarganegaraan_id": 3,
+      "pekerjaan_id": 47,
+      "dusun_id": 1,
+      "rw_id": 1,
+      "rt_id": 51,
+      "alamat": "Jr. Peta No. 982, Kotamobagu 70080, Babel",
+      "nama_ayah": "Azalea Rika Kusmawati",
+      "nama_ibu": "Faizah Ulya Namaga S.E.I",
+      "status": 1,
+      "created_at": "2022-05-29T12:52:55.000000Z",
+      "updated_at": "2022-05-29T12:52:55.000000Z",
+      "deleted_at": null,
+      "hubungan": {
+        "id": 5,
+        "nama": "MENANTU"
+      },
+      "agama": {
+        "id": 5,
+        "nama": "BUDHA"
+      },
+      "pendidikan": {
+        "id": 4,
+        "nama": "SLTP/SEDERAJAT"
+      },
+      "kawin": {
+        "id": 1,
+        "nama": "BELUM KAWIN"
+      },
+      "kewarganegaraan": {
+        "id": 3,
+        "nama": "DUA KEWARGANEGARAAN"
+      },
+      "pekerjaan": {
+        "id": 47,
+        "nama": "PROMOTOR ACARA"
+      },
+      "dusun": {
+        "id": 1,
+        "nama_dusun": "Dusun_1",
+        "kepala_dusun": "Mr. Kaden Marks",
+        "nik": "11111111111"
+      },
+      "rt": {
+        "id": 51,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": "Dusun_1_rw_1_rt_1",
+        "rt_ketua": "Rodger Murray PhD"
+      },
+      "rw": {
+        "id": 1,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": null,
+        "rt_ketua": null
+      }
+    },
+    {
+      "id": 7,
+      "nama": "Ella Andriani",
+      "foto": "avatar.png",
+      "nik": "7271204710070906",
+      "no_kk": "6202651709014212",
+      "hubungan_id": 1,
+      "sex": 2,
+      "tempatlahir": "Bangkalan",
+      "tanggallahir": "2004-05-15",
+      "agama_id": 4,
+      "pendidikan_terakhir_id": 5,
+      "kawin_id": 1,
+      "kewarganegaraan_id": 1,
+      "pekerjaan_id": 7,
+      "dusun_id": 1,
+      "rw_id": 1,
+      "rt_id": 51,
+      "alamat": "Ds. Basket No. 404, Administrasi Jakarta Utara 12430, Maluku",
+      "nama_ayah": "Embuh Argono Hutagalung",
+      "nama_ibu": "Ika Laksita",
+      "status": 1,
+      "created_at": "2022-05-29T12:52:55.000000Z",
+      "updated_at": "2022-05-29T12:52:55.000000Z",
+      "deleted_at": null,
+      "hubungan": {
+        "id": 1,
+        "nama": "KEPALA KELUARGA"
+      },
+      "agama": {
+        "id": 4,
+        "nama": "HINDU"
+      },
+      "pendidikan": {
+        "id": 5,
+        "nama": "SLTA / SEDERAJAT"
+      },
+      "kawin": {
+        "id": 1,
+        "nama": "BELUM KAWIN"
+      },
+      "kewarganegaraan": {
+        "id": 1,
+        "nama": "WNI"
+      },
+      "pekerjaan": {
+        "id": 7,
+        "nama": "KEPOLISIAN RI (POLRI)"
+      },
+      "dusun": {
+        "id": 1,
+        "nama_dusun": "Dusun_1",
+        "kepala_dusun": "Mr. Kaden Marks",
+        "nik": "11111111111"
+      },
+      "rt": {
+        "id": 51,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": "Dusun_1_rw_1_rt_1",
+        "rt_ketua": "Rodger Murray PhD"
+      },
+      "rw": {
+        "id": 1,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": null,
+        "rt_ketua": null
+      }
+    },
+    {
+      "id": 9,
+      "nama": "Ganda Siregar",
+      "foto": "avatar.png",
+      "nik": "6208005810153007",
+      "no_kk": "6502311206949307",
+      "hubungan_id": 5,
+      "sex": 1,
+      "tempatlahir": "Bangkalan",
+      "tanggallahir": "1993-11-24",
+      "agama_id": 5,
+      "pendidikan_terakhir_id": 1,
+      "kawin_id": 2,
+      "kewarganegaraan_id": 1,
+      "pekerjaan_id": 43,
+      "dusun_id": 1,
+      "rw_id": 1,
+      "rt_id": 51,
+      "alamat": "Psr. Wahid Hasyim No. 987, Tangerang 99083, NTT",
+      "nama_ayah": "Unjani Nuraini",
+      "nama_ibu": "Ghani Adhiarja Suwarno",
+      "status": 1,
+      "created_at": "2022-05-29T12:52:55.000000Z",
+      "updated_at": "2022-05-29T12:52:55.000000Z",
+      "deleted_at": null,
+      "hubungan": {
+        "id": 5,
+        "nama": "MENANTU"
+      },
+      "agama": {
+        "id": 5,
+        "nama": "BUDHA"
+      },
+      "pendidikan": {
+        "id": 1,
+        "nama": "TIDAK / BELUM SEKOLAH"
+      },
+      "kawin": {
+        "id": 2,
+        "nama": "KAWIN"
+      },
+      "kewarganegaraan": {
+        "id": 1,
+        "nama": "WNI"
+      },
+      "pekerjaan": {
+        "id": 43,
+        "nama": "PASTOR"
+      },
+      "dusun": {
+        "id": 1,
+        "nama_dusun": "Dusun_1",
+        "kepala_dusun": "Mr. Kaden Marks",
+        "nik": "11111111111"
+      },
+      "rt": {
+        "id": 51,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": "Dusun_1_rw_1_rt_1",
+        "rt_ketua": "Rodger Murray PhD"
+      },
+      "rw": {
+        "id": 1,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": null,
+        "rt_ketua": null
+      }
+    },
+    {
+      "id": 10,
+      "nama": "Raihan Firgantoro S.Pd",
+      "foto": "avatar.png",
+      "nik": "5203062712099555",
+      "no_kk": "9203280708061584",
+      "hubungan_id": 10,
+      "sex": 2,
+      "tempatlahir": "Bangkalan",
+      "tanggallahir": "1980-01-16",
+      "agama_id": 6,
+      "pendidikan_terakhir_id": 6,
+      "kawin_id": 4,
+      "kewarganegaraan_id": 2,
+      "pekerjaan_id": 20,
+      "dusun_id": 1,
+      "rw_id": 1,
+      "rt_id": 51,
+      "alamat": "Ki. Ters. Jakarta No. 618, Administrasi Jakarta Barat 70587, Kalbar",
+      "nama_ayah": "Diana Susanti S.T.",
+      "nama_ibu": "Langgeng Waluyo",
+      "status": 1,
+      "created_at": "2022-05-29T12:52:55.000000Z",
+      "updated_at": "2022-05-29T12:52:55.000000Z",
+      "deleted_at": null,
+      "hubungan": {
+        "id": 10,
+        "nama": "PEMBANTU"
+      },
+      "agama": {
+        "id": 6,
+        "nama": "KHONGHUCU"
+      },
+      "pendidikan": {
+        "id": 6,
+        "nama": "DIPLOMA I / II"
+      },
+      "kawin": {
+        "id": 4,
+        "nama": "CERAI MATI"
+      },
+      "kewarganegaraan": {
+        "id": 2,
+        "nama": "WNA"
+      },
+      "pekerjaan": {
+        "id": 20,
+        "nama": "BURUH TANI/PERKEBUNAN"
+      },
+      "dusun": {
+        "id": 1,
+        "nama_dusun": "Dusun_1",
+        "kepala_dusun": "Mr. Kaden Marks",
+        "nik": "11111111111"
+      },
+      "rt": {
+        "id": 51,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": "Dusun_1_rw_1_rt_1",
+        "rt_ketua": "Rodger Murray PhD"
+      },
+      "rw": {
+        "id": 1,
+        "dusun_id": 1,
+        "rw_nama": "Dusun_1_rw_1",
+        "rw_ketua": "Gavin O'Hara",
+        "rt_nama": null,
+        "rt_ketua": null
+      }
+    }
+  ],
+  "limit": 5,
+  "offset": 0,
+  "pagination": [
+    {
+      "page": 1,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=0&tanggal=2022-5-30"
+    },
+    {
+      "page": 2,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=5&tanggal=2022-5-30"
+    },
+    {
+      "page": 3,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=10&tanggal=2022-5-30"
+    },
+    {
+      "page": 4,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=15&tanggal=2022-5-30"
+    },
+    {
+      "page": 5,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=20&tanggal=2022-5-30"
+    },
+    {
+      "page": 6,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=25&tanggal=2022-5-30"
+    },
+    {
+      "page": 7,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=30&tanggal=2022-5-30"
+    },
+    {
+      "page": 8,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=35&tanggal=2022-5-30"
+    },
+    {
+      "page": 9,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=40&tanggal=2022-5-30"
+    },
+    {
+      "page": 10,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=45&tanggal=2022-5-30"
+    },
+    {
+      "page": 11,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=50&tanggal=2022-5-30"
+    },
+    {
+      "page": 12,
+      "url": "http://127.0.0.1:8000/penduduk/pemilih?limit=5&offset=55&tanggal=2022-5-30"
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
