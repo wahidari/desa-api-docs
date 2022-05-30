@@ -1,0 +1,42 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Export Calon Pemilih
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">penduduk/export?tanggal=2022-05-30</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+**Header :**
+| Name                | Value                             |
+| :----------         | :------                           |
+| Content-Disposition | attachment; filename=Penduduk.csv |
+
+**Preview :**
+```json
+"Nama","NIK","No_KK","Jenis Kelamin","Tempat Lahir","Tanggal Lahir","Dusun","RW","RT","Alamat"
+"Jayeng Ismail Budiman","7415445603030575","1771255912116790","Perempuan","Bangkalan","2014-09-07","Dusun_1","Dusun_1_rw_1","","Jln. Laswi No. 150, Magelang 27291, Sulsel"
+"Anastasia Mayasari","1971641705014859","7604362604100546","Laki-laki","Bangkalan","2001-09-07","Dusun_1","Dusun_1_rw_1","","Kpg. Bayan No. 304, Pariaman 38712, Sulteng"
+"Damar Balidin Simbolon S.E.I","6102022301162683","9118710302077719","Perempuan","Bangkalan","1977-04-22","Dusun_1","Dusun_1_rw_1","","Dk. Babah No. 487, Kediri 61239, Kaltim"
+"Imam Garang Prakasa S.I.Kom","7306000506089425","1771376606042356","Laki-laki","Bangkalan","1996-01-14","Dusun_1","Dusun_1_rw_1","","Jr. Taman No. 182, Sawahlunto 35916, Sulut"
+"Dimas Sihombing","9208870301203316","7212110505964853","Laki-laki","Bangkalan","1989-05-31","Dusun_1","Dusun_1_rw_1","","Ki. Umalas No. 694, Kediri 21988, NTT"
+"..."
+"..."
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
