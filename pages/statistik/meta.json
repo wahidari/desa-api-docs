@@ -3,5 +3,6 @@
   "agama": "Statistik Agama",
   "pekerjaan": "Statistik Pekerjaan",
   "status": "Statistik Status",
-  "umur": "Statistik Umur"
+  "umur": "Statistik Umur",
+  "pendidikan": "Statistik Pendidikan"
 }
