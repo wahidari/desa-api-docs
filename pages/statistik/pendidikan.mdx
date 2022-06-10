@@ -1,0 +1,70 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get Statistik Pendidikan
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/statistik/pendidikan</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+[
+  {
+    "nama": "TIDAK / BELUM SEKOLAH",
+    "jumlah": 11
+  },
+  {
+    "nama": "BELUM TAMAT SD/SEDERAJAT",
+    "jumlah": 9
+  },
+  {
+    "nama": "TAMAT SD / SEDERAJAT",
+    "jumlah": 8
+  },
+  {
+    "nama": "SLTP/SEDERAJAT",
+    "jumlah": 10
+  },
+  {
+    "nama": "SLTA / SEDERAJAT",
+    "jumlah": 5
+  },
+  {
+    "nama": "DIPLOMA I / II",
+    "jumlah": 13
+  },
+  {
+    "nama": "AKADEMI/ DIPLOMA III/S. MUDA",
+    "jumlah": 12
+  },
+  {
+    "nama": "DIPLOMA IV/ STRATA I",
+    "jumlah": 9
+  },
+  {
+    "nama": "STRATA II",
+    "jumlah": 14
+  },
+  {
+    "nama": "STRATA III",
+    "jumlah": 9
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
