@@ -1,0 +1,54 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Login Admin
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/admin/login</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+  "username": "username",
+  "password": "password"
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "data": {
+    "user_info": {
+      "username": "username",
+      "name": "name",
+      "nip": "94859",
+      "jabatan": "jabatan"
+    },
+    "access_token": "6|6MqeZdEAKniOPszGyMXEdj7YOt6sKTPUIqndRbj8",
+    "token_type": "Bearer"
+  },
+  "message": "Login successfully",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "message": "Password yang anda masukkan salah",
+  "status": 401
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
