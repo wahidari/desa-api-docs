@@ -1,0 +1,6 @@
+{
+  "list": "Get All User",
+  "create": "Create User",
+  "edit": "Update User",
+  "delete": "Delete User"
+}
