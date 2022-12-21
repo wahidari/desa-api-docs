@@ -1,0 +1,211 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get Detail UMKM
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/umkm/(ID)</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "id": 11,
+  "nama_umkm": "UMKM I to J",
+  "nama_pemilik": "UMKM I to J",
+  "dusun_id": 2,
+  "rw_id": 12,
+  "rt_id": 107,
+  "nomor_wa": "123456",
+  "created_at": "2022-06-07T05:18:37.000000Z",
+  "updated_at": "2022-06-07T05:20:43.000000Z",
+  "deleted_at": null,
+  "dusun": {
+    "id": 2,
+    "nama_dusun": "Dusun_2",
+    "kepala_dusun": "Aleen Grimes",
+    "nik": "11111111111"
+  },
+  "rt": {
+    "id": 107,
+    "dusun_id": 2,
+    "rw_nama": "Dusun_2_rw_2",
+    "rw_ketua": "Abigayle Hodkiewicz",
+    "rt_nama": "Dusun_2_rw_2_rt_2",
+    "rt_ketua": "Ms. Ada Bergnaum MD"
+  },
+  "rw": {
+    "id": 12,
+    "dusun_id": 2,
+    "rw_nama": "Dusun_2_rw_2",
+    "rw_ketua": "Abigayle Hodkiewicz",
+    "rt_nama": null,
+    "rt_ketua": null
+  },
+  "produk": [
+    {
+      "id": 12,
+      "umkm_id": 11,
+      "nama_produk": "Produk With 0 Image",
+      "deskripsi": "Produk With 0 Image",
+      "harga": "0",
+      "link_pembelian": "Produk With 0 Image",
+      "created_at": "2022-06-07T07:55:00.000000Z",
+      "updated_at": "2022-06-07T07:55:00.000000Z",
+      "deleted_at": null
+    },
+    {
+      "id": 13,
+      "umkm_id": 11,
+      "nama_produk": "Produk With 1 Image",
+      "deskripsi": "Produk With 1 Image",
+      "harga": "1000",
+      "link_pembelian": "Produk With 1 Image",
+      "created_at": "2022-06-07T07:55:19.000000Z",
+      "updated_at": "2022-06-07T07:55:19.000000Z",
+      "deleted_at": null
+    },
+    {
+      "id": 14,
+      "umkm_id": 11,
+      "nama_produk": "Produk With 2 Image",
+      "deskripsi": "Produk With 2 Image",
+      "harga": "2000",
+      "link_pembelian": "Produk With 2 Image",
+      "created_at": "2022-06-07T07:55:42.000000Z",
+      "updated_at": "2022-06-07T07:55:42.000000Z",
+      "deleted_at": null
+    },
+    {
+      "id": 15,
+      "umkm_id": 11,
+      "nama_produk": "Produk With 3 Image",
+      "deskripsi": "Produk With 3 Image",
+      "harga": "3000",
+      "link_pembelian": "Produk With 3 Image",
+      "created_at": "2022-06-07T07:56:15.000000Z",
+      "updated_at": "2022-06-07T07:56:15.000000Z",
+      "deleted_at": null
+    },
+    {
+      "id": 16,
+      "umkm_id": 11,
+      "nama_produk": "Produk With 4 Image",
+      "deskripsi": "Produk With 4 Image",
+      "harga": "4000",
+      "link_pembelian": "Produk With 4 Image",
+      "created_at": "2022-06-07T07:57:59.000000Z",
+      "updated_at": "2022-06-07T07:57:59.000000Z",
+      "deleted_at": null
+    }
+  ],
+  "photo": [
+    {
+      "id": 3,
+      "umkm_produk_id": 14,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-VJq3vrK.jpeg",
+      "created_at": "2022-06-07T07:55:42.000000Z",
+      "updated_at": "2022-06-07T07:55:42.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    },
+    {
+      "id": 4,
+      "umkm_produk_id": 15,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-xGkmxnR.jpeg",
+      "created_at": "2022-06-07T07:56:15.000000Z",
+      "updated_at": "2022-06-07T07:56:15.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    },
+    {
+      "id": 7,
+      "umkm_produk_id": 16,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-3No4Eyn.jpeg",
+      "created_at": "2022-06-07T07:58:00.000000Z",
+      "updated_at": "2022-06-07T07:58:00.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    },
+    {
+      "id": 8,
+      "umkm_produk_id": 16,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-bbeEnLr.jpeg",
+      "created_at": "2022-06-07T07:58:00.000000Z",
+      "updated_at": "2022-06-07T07:58:00.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    },
+    {
+      "id": 11,
+      "umkm_produk_id": 14,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-MpY35j8.jpeg",
+      "created_at": "2022-06-07T08:32:42.000000Z",
+      "updated_at": "2022-06-07T08:32:42.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    },
+    {
+      "id": 12,
+      "umkm_produk_id": 15,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-GVle7mX.jpeg",
+      "created_at": "2022-06-07T08:33:03.000000Z",
+      "updated_at": "2022-06-07T08:33:03.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    },
+    {
+      "id": 14,
+      "umkm_produk_id": 15,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-AGN4plk.jpeg",
+      "created_at": "2022-06-07T08:33:25.000000Z",
+      "updated_at": "2022-06-07T08:33:25.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    },
+    {
+      "id": 15,
+      "umkm_produk_id": 16,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-87Xw4XB.jpeg",
+      "created_at": "2022-06-07T08:34:05.000000Z",
+      "updated_at": "2022-06-07T08:34:05.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    },
+    {
+      "id": 16,
+      "umkm_produk_id": 16,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-zNnkDnm.jpeg",
+      "created_at": "2022-06-07T08:34:13.000000Z",
+      "updated_at": "2022-06-07T08:34:13.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    },
+    {
+      "id": 17,
+      "umkm_produk_id": 13,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-y0pnNBe.jpeg",
+      "created_at": "2022-06-07T08:35:03.000000Z",
+      "updated_at": "2022-06-07T08:35:03.000000Z",
+      "deleted_at": null,
+      "laravel_through_key": 11
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
