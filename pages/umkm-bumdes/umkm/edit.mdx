@@ -1,0 +1,54 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Update UMKM
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/umkm/(ID)?\_method=PUT</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+  "nama_umkm": "UMKM A",
+  "nama_pemilik": "Pemilik UMKM A",
+  "dusun": "1",
+  "rw": "1",
+  "rt": "1",
+  "nomor_wa": "081234567890"
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success update UMKM",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "nama_umkm": ["The nama umkm field is required."],
+    "nama_pemilik": ["The nama pemilik field is required."],
+    "dusun": ["The dusun field is required."],
+    "rw": ["The rw field is required."],
+    "rt": ["The rt field is required."],
+    "nomor_wa": ["The nomor wa field is required."]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
