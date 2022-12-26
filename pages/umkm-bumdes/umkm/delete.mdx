@@ -1,0 +1,31 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Delete UMKM
+
+You can delete data that has been stored in database by sending a DELETE request to remove a document using the unique `ID`
+
+**Method :** <Badge variant="danger">DELETE</Badge>
+
+**URL :** <Badge variant="dark">/umkm/(ID)</Badge>
+
+**Response :** <BadgeOutline variant="success">201 OK</BadgeOutline>
+
+```json
+{
+  "status": 201,
+  "message": "success delete UMKM"
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
