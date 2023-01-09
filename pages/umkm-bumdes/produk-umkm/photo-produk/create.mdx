@@ -1,0 +1,43 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Create Photo Produk UMKM
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/umkm/(ID)/produk/(ID)/photo</Badge>
+
+**Body :** <Badge variant="purple">Form Data</Badge>
+
+| Field            | Type     | Required |
+| :----------      | :------  | :------: |
+| umkm_produk_id   | String   |    ✔️    |
+| photo            | JPG/PNG  |    ✔️    |
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "status": 201,
+  "message": "success add photo produk umkm"
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "umkm_produk_id": ["The umkm produk id field is required."]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
