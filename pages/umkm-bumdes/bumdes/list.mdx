@@ -1,0 +1,94 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get All Bumdes
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/bumdes</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "data": [
+    {
+      "id": 4,
+      "nama_produk": "Keripik Kentang",
+      "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis nesciunt iusto ad? Nam laboriosam nisi rerum consectetur id deleniti, dignissimos eos aut sapiente, sunt minima molestiae saepe officia quidem.",
+      "harga": "10000",
+      "created_at": "2022-06-23T13:22:20.000000Z",
+      "updated_at": "2022-06-23T13:22:20.000000Z",
+      "deleted_at": null,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/agenda.png"
+    },
+    {
+      "id": 5,
+      "nama_produk": "Kain Tenun",
+      "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis nesciunt iusto ad? Nam laboriosam nisi rerum consectetur id deleniti, dignissimos eos aut sapiente, sunt minima molestiae saepe officia quidem.",
+      "harga": "10000",
+      "created_at": "2022-06-23T13:22:20.000000Z",
+      "updated_at": "2022-06-23T13:22:20.000000Z",
+      "deleted_at": null,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/agenda.png"
+    },
+    {
+      "id": 6,
+      "nama_produk": "Pupuk Organik",
+      "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis nesciunt iusto ad? Nam laboriosam nisi rerum consectetur id deleniti, dignissimos eos aut sapiente, sunt minima molestiae saepe officia quidem.",
+      "harga": "10000",
+      "created_at": "2022-06-23T13:22:20.000000Z",
+      "updated_at": "2022-06-23T13:22:20.000000Z",
+      "deleted_at": null,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/agenda.png"
+    },
+    {
+      "id": 1,
+      "nama_produk": "Keripik Kentang",
+      "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis nesciunt iusto ad? Nam laboriosam nisi rerum consectetur id deleniti, dignissimos eos aut sapiente, sunt minima molestiae saepe officia quidem.",
+      "harga": "10000",
+      "created_at": "2022-06-23T13:22:07.000000Z",
+      "updated_at": "2022-06-23T13:22:07.000000Z",
+      "deleted_at": null,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/agenda.png"
+    },
+    {
+      "id": 2,
+      "nama_produk": "Kain Tenun",
+      "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis nesciunt iusto ad? Nam laboriosam nisi rerum consectetur id deleniti, dignissimos eos aut sapiente, sunt minima molestiae saepe officia quidem.",
+      "harga": "10000",
+      "created_at": "2022-06-23T13:22:07.000000Z",
+      "updated_at": "2022-06-23T13:22:07.000000Z",
+      "deleted_at": null,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/agenda.png"
+    }
+  ],
+  "limit": 5,
+  "offset": 0,
+  "pagination": [
+    {
+      "page": 1,
+      "url": "http://127.0.0.1:8000/bumdes?limit=5&offset=0"
+    },
+    {
+      "page": 2,
+      "url": "http://127.0.0.1:8000/bumdes?limit=5&offset=5"
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
