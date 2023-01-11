@@ -1,0 +1,71 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Get Detail Bumdes
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge>GET</Badge>
+
+**URL :** <Badge variant="dark">/bumdes/(ID)</Badge>
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "id": 23,
+  "nama_produk": "Produk Bumdes Foto 4",
+  "deskripsi": "Produk Bumdes Foto 4",
+  "harga": "40000",
+  "created_at": "2022-06-07T05:54:00.000000Z",
+  "updated_at": "2022-06-07T05:54:00.000000Z",
+  "deleted_at": null,
+  "photo": [
+    {
+      "id": 42,
+      "bumdes_produk_id": 23,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-XlDEXob.jpeg",
+      "created_at": "2022-06-07T05:54:00.000000Z",
+      "updated_at": "2022-06-07T05:54:00.000000Z",
+      "deleted_at": null
+    },
+    {
+      "id": 43,
+      "bumdes_produk_id": 23,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-XlDEXob.jpeg",
+      "created_at": "2022-06-07T05:54:00.000000Z",
+      "updated_at": "2022-06-07T05:54:00.000000Z",
+      "deleted_at": null
+    },
+    {
+      "id": 44,
+      "bumdes_produk_id": 23,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-XlDEXob.jpeg",
+      "created_at": "2022-06-07T05:54:01.000000Z",
+      "updated_at": "2022-06-07T05:54:01.000000Z",
+      "deleted_at": null
+    },
+    {
+      "id": 45,
+      "bumdes_produk_id": 23,
+      "photo": "https://qaryaco.sgp1.digitaloceanspaces.com/desadigital/ID_DESA_DEV/media/Produk-YzqEXKl.jpeg",
+      "created_at": "2022-06-07T05:54:01.000000Z",
+      "updated_at": "2022-06-07T05:54:01.000000Z",
+      "deleted_at": null
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 NOT FOUND</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
