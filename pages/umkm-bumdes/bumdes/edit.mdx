@@ -1,0 +1,48 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Update Bumdes
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/bumdes/produk/(ID)?\_method=PUT</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+  "nama_produk": "Produk Bumdes A",
+  "deskripsi": "Deskripsi Produk Bumdes A",
+  "harga": "2022"
+}
+```
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success update bumdes",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "nama_produk": ["The nama produk field is required."],
+    "deskripsi": ["The deskripsi field is required."],
+    "harga": ["The harga field is required."]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
