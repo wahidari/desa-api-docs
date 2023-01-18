@@ -1,0 +1,52 @@
+import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
+
+# Create Produk UMKM
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="success">POST</Badge>
+
+**URL :** <Badge variant="dark">/umkm/(ID)/produk</Badge>
+
+**Body :** <Badge variant="purple">Form Data</Badge>
+
+| Field          | Type    | Required |
+| :----------    | :------ | :------: |
+| umkm_id        | String  |    ✔️    |
+| nama_produk    | String  |    ✔️    |
+| deskripsi      | String  |    ✔️    |
+| harga          | String  |    ✔️    |
+| link_pembelian | String  |    ✔️    |
+| photo[]        | JPG/PNG |          |
+| photo[]        | JPG/PNG |          |
+
+**Response :** <BadgeOutline variant="success">200 OK</BadgeOutline>
+
+```json
+{
+  "message": "Success create produk UMKM",
+  "status": 200
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 UNPROCESSABLE CONTENT</BadgeOutline>
+
+```json
+{
+  "error": {
+    "umkm_id": ["The umkm id field is required."],
+    "nama_produk": ["The nama produk field is required."],
+    "deskripsi": ["The deskripsi field is required."],
+    "harga": ["The harga field is required."],
+    "link_pembelian": ["The link pembelian field is required."]
+  }
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 ERROR</BadgeOutline>
+
+```json
+Internal Server Error
+```
